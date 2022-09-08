@@ -1,0 +1,128 @@
+:root {
+  --colorMainBackground: hsl(233, 47%, 7%);
+  --colorCardBackground: hsl(244, 38%, 16%);
+  --colorAccent: hsl(277, 64%, 61%);
+
+  --colorWhite: hsl(0, 0%, 100%);
+  --colorTransparentWhiteMainParagraph: hsla(0, 0%, 100%, 0.75);
+  --colorTransparentWhiteStatHeadings: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-size: 0.7rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--colorWhite);
+  background-color: var(--colorMainBackground);
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+.statNumber {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+p,
+.statCategory {
+  font-weight: 200;
+  line-height: 1.25rem;
+}
+
+.card {
+  background-color: var(--colorCardBackground);
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  max-width: 16rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cardImageDiv {
+  background-color: var(--colorAccent);
+  max-width: inherit;
+}
+
+.cardImage {
+  max-width: inherit;
+  opacity: 0.3;
+  display: block;
+}
+
+.cardContent {
+  padding: 0 2rem;
+  text-align: center;
+}
+.accent {
+  color: var(--colorAccent);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  max-width: 16rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 750px) {
+  h1,
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .card {
+    flex-direction: row-reverse;
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .attribution {
+    max-width: none;
+  }
+
+  .cardImageDiv {
+    max-width: none;
+    width: 50%;
+  }
+  .cardImage {
+    max-width: none;
+  }
+
+  .cardContent {
+    width: 50%;
+    height: inherit;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .statGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .cardImage {
+    width: 100%;
+  }
+}
