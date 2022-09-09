@@ -40,7 +40,7 @@ p,
   border-radius: 0.5rem;
   overflow: hidden;
 
-  max-width: 16rem;
+  width: 16rem;
 
   display: flex;
   flex-direction: column;
@@ -48,6 +48,9 @@ p,
 
 .cardImageDiv {
   background-color: var(--colorAccent);
+  background-image: url(./images/image-header-desktop.jpg);
+  background-blend-mode: multiply;
+  background-size: 100% 100%;
   max-width: inherit;
 }
 
@@ -83,15 +86,20 @@ p,
   color: hsl(228, 45%, 44%);
 }
 
-@media screen and (min-width: 750px) {
-  h1,
-  .statNumber {
+@media screen and (max-width: 1110px) {
+  .cardImageDiv {
+    height: 10rem;
+  }
+}
+
+@media screen and (min-width: 1110px) {
+  h1 {
     font-size: 2rem;
   }
 
   .card {
     flex-direction: row-reverse;
-    max-width: 80%;
+    width: 70rem;
     margin: auto;
   }
 
@@ -103,9 +111,6 @@ p,
     max-width: none;
     width: 50%;
   }
-  .cardImage {
-    max-width: none;
-  }
 
   .cardContent {
     width: 50%;
@@ -116,13 +121,13 @@ p,
     justify-content: space-around;
 
     text-align: left;
+    padding: 3.3rem 3rem;
   }
   .statGroup {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    padding-top: 5rem;
   }
 }
-
-
