@@ -9,7 +9,7 @@
 }
 
 body {
-  font-size: 0.7rem;
+  font-size: 1rem;
   font-family: 'Inter', sans-serif;
   color: var(--colorWhite);
   background-color: var(--colorMainBackground);
@@ -55,6 +55,8 @@ p,
   max-width: inherit;
   opacity: 0.3;
   display: block;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .cardContent {
@@ -112,6 +114,8 @@ p,
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
+    text-align: left;
   }
   .statGroup {
     display: flex;
@@ -121,8 +125,4 @@ p,
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .cardImage {
-    width: 100%;
-  }
-}
+
